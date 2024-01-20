@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Color Changer</title>
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #91ee27;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 36px;
+            margin-top: 30px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            color: #ec0c0c;
+            background-color: #2191db;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .color-box {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #f1c40f;
+            border: 10px solid #df6c07;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Color Changer Hands-On</h1>
+
+    <button id="colorButton">Change Color</button>
+
+    <div id="colorBox" class="color-box"></div>
+
+    <script>
+        function changeColor() {
+            var colorBox = document.getElementById("colorBox");
+
+            if (colorBox.style.backgroundColor === "green") {
+                colorBox.style.backgroundColor = "blue";
+            } else {
+                colorBox.style.backgroundColor = "green";
+            }
+        }
+
+        document.getElementById("colorButton").addEventListener("click", changeColor);
+    </script>
+</body>
+</html>
